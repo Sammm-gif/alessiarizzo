@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto 1fr 1fr auto; /* Header, main content, footer */
+    height: 100vh; /* Full viewport height */
+    background-color: #FAF8F6;
+}
+
+.header{
+    margin-top: 30px;
+    grid-column: 2 / 10;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.header a {
+    text-decoration:  none;
+    color: #36454F;
+}
+
+.logo {
+    grid-column: 1 / 5;
+    padding: 50px;
+    font-family: "Raleway", serif;
+    font-size: 10px;
+}
+
+.navbar{
+    grid-column: 5 / 13;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: 7px;
+    text-transform: uppercase;
+}
+
+.navbar a {
+    position: relative;
+    color: #36454F; /* Default link color */
+    text-decoration: none;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px; /* Distance below the text */
+    width: 0;
+    height: 1px;
+    background: #36454F;; /* Accent color */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%; /* Full underline width */
+    left: 0;
+}
+
+.main{
+    margin-top:50px; 
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    grid-template-columns: repeat(10,1fr);
+}
+
+img{
+    max-width: 500px;
+}
+
+.left{
+    display: flex;
+    grid-column: 2 / 5;
+    padding: 50px;
+}
+
+.right{
+    grid-column: 6 / 11;
+    display: grid;
+   padding: 50px;
+}
+
+.right p{
+    line-height: 1.8;     
+    text-align: justify;  
+    max-width: 600px;    
+}
+
+
+#footer{
+    padding: 50px;
+    grid-column: 1 / 11;
+    grid-row: 10 / 11;
+    display: flex;
+    justify-content: center;
+}
+
+#footer  h3{
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+}

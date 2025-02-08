@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto 1fr 1fr auto; /* Header, main content, footer */
+    height: 100vh; /* Full viewport height */
+    background-color: #FAF8F6;
+}
+
+.header{
+    margin-top: 30px;
+    grid-column: 2 / 10;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.header a {
+    text-decoration:  none;
+    color: #36454F;
+}
+
+.logo {
+    grid-column: 1 / 5;
+    padding: 50px;
+    font-family: "Raleway", serif;
+    font-size: 10px;
+}
+
+
+.navbar{
+    grid-column: 5 / 13;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 7px;
+    text-transform: uppercase;
+}
+
+.navbar a {
+    position: relative;
+    color: #36454F; /* Default link color */
+    text-decoration: none;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px; /* Distance below the text */
+    width: 0;
+    height: 1px;
+    background: #36454F;; /* Accent color */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%; /* Full underline width */
+    left: 0;
+}
+
+#footer{
+    padding: 50px;
+    grid-column: 1 / 11;
+    grid-row: 10 / 11;
+    display: flex;
+    justify-content: center;
+}
+
+#footer  h3{
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+}
+
+
+.main{
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto 1fr 1fr auto;
+}
+
+.getintouch{
+    margin-top: 120px;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto auto;
+    font-family: "Raleway", serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.getintouch h2{
+    font-family: "Raleway", serif;
+    font-size: 30px;
+    font-weight: 400;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: left;
+    padding-left: 25px;
+    text-transform:lowercase;
+}
+
+.getintouch p{
+    font-family: "Raleway", serif;
+    font-size: 20px;
+    font-weight: 400;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.getintouch form{
+    grid-column:2 / 3 ;
+    grid-row: 2 / 3;
+    padding: 25px;
+    text-transform: lowercase;
+}
+
+.getintouch input[type="email"] {
+   
+    font-size: 16px;         /* Font size */
+    border: 2px solid #36454F;  /* Border color */
+    border-radius: 5px;      /* Rounded corners */
+    background-color: #FAF8F6; /* Light background */
+    color: #36454F;          /* Text color */
+    transition: all 0.4s ease; /* Smooth transition for hover/focus */
+}
+
+.getintouch input[type="email"]:hover {
+    border-color: #5F6368;   
+    background-color:  #36454F; 
+    color: #FAF8F6;
+    transition: ease-in 0.4s;
+}
+
+.getintouch textarea {
+    font-size: 16px;         
+    border: 2px solid #36454F;  
+    border-radius: 5px;     
+    background-color: #FAF8F6; 
+    color: #36454F;          
+    resize: vertical;       
+    min-height: 120px;        
+    transition: all 0.4s ease; 
+}
+
+
+.getintouch textarea:hover {
+    border-color: #5F6368;   
+    background-color:  #36454F; 
+    color: #FAF8F6;
+    transition: ease-in 0.4s;
+}
+
+
+.getintouch button{
+    background-color: #FAF8F6;
+    color:#36454F;
+    border: 0 0 0 2px;
+    border-radius: 5px;
+    padding: 5px;
+    transition: ease-in 0.4s;
+    margin-top: 10px;
+}
+
+.getintouch button:hover{
+    background-color: #36454F;
+    color:#FAF8F6;
+    border: 0 0 0 2px;
+    border-radius: 5px;
+    padding: 5px;
+    transition: ease-in 0.4s;
+    cursor: pointer;
+}
