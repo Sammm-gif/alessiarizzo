@@ -35,6 +35,24 @@ body{
     font-size: 10px;
 }
 
+/*
+.nav-menu{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+*/
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+ 
+
 .navbar{
     grid-column: 5 / 13;
     display: flex;
@@ -46,7 +64,7 @@ body{
     font-optical-sizing: auto;
     font-weight: lighter;
     font-style: normal;
-    font-size: 7px;
+    font-size: 7px; 
     text-transform: uppercase;
 }
 
@@ -136,4 +154,93 @@ body{
     font-weight: 500;
     font-style: normal;
     font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    /* General body styles */
+    body {
+        display: grid;
+        grid-template-columns: 1fr; /* 1 column layout for mobile */
+        grid-template-rows: auto 1fr auto; /* Header, main content, footer */
+        padding: 0 10px; /* Add some padding for mobile screens */
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        grid-column: 1 / 2; /* Header takes full width */
+        margin-top: 10px; /* Reduced margin for better fit */
+    }
+
+    .logo {
+        font-size: 10px; /* Larger font size for logo on mobile */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .navbar {
+        grid-column: 1 / 2; /* Navbar takes full width */
+        padding: 20px; /* Adjust padding */
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .navbar a {
+        font-size: 5px; /* Increase font size on navbar links */
+    }
+
+    .slider {
+        grid-column: 1 / 2; /* Full-width slider */
+        width: 100%; /* Full-width */
+        height: 250px; /* Smaller slider height */
+        max-width: 100%; /* Ensure slider fits inside screen */
+    }
+
+    .slides img {
+        width: 100%; /* Make images responsive */
+        height: 250px; /* Adjust height */
+    }
+
+    #footer {
+        grid-column: 1 / 2; /* Footer full width */
+        padding: 20px;
+        text-align: center; /* Center the footer text */
+    }
+
+    #footer h3 {
+        font-size: 12px; /* Smaller footer font size */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide the navbar */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #FAF8F6;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    /* Show navbar when active */
+    .navbar.active {
+        display: flex;
+    }
 }
