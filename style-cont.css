@@ -74,6 +74,13 @@ body{
     left: 0;
 }
 
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+ 
+
 #footer{
     padding: 50px;
     grid-column: 1 / 11;
@@ -195,3 +202,99 @@ body{
     transition: ease-in 0.4s;
     cursor: pointer;
 }
+
+
+
+/*!!!PHONE STARTS HERE !!!*/
+
+
+@media screen and (max-width: 768px) {
+    /* General body styles */
+    
+    body {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto 1fr auto; 
+        padding: 0 10px;  
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        grid-column: 1 / 2; 
+        margin-top: 10px; 
+    }
+
+    .logo {
+        font-size: 10px; 
+        padding: 10px;
+    }
+
+    /*
+    .navbar {
+        grid-column: 1 / 2; /* Navbar takes full width 
+        padding: 20px; /* Adjust padding 
+        font-size: 12px; /* Adjust font size for smaller screens 
+    }
+
+    .navbar a {
+        font-size: 5px; /* Increase font size on navbar links 
+    }
+
+    */
+
+    .navbar {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #FAF8F6;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 50px;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+        font-size: 7px;
+    }
+
+    .menu-icon {
+        display: block; 
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .main{
+        grid-column: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .getintouch{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer {
+        grid-column: 1 / 2; 
+        text-align: center; 
+    }
+
+    #footer h3 {
+        font-size: 12px;
+    }
+
+}
+

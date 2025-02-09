@@ -121,3 +121,7 @@ $(document).ready(function() {
 function toggleMenu() {
     document.querySelector(".navbar").classList.toggle("active");
 }
+
+function ArtisticResearch(){
+    document.querySelector(".info").classList.toggle("active")
+}
