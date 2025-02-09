@@ -213,6 +213,7 @@ body{
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         margin-bottom: 50px;
+        z-index: 1000;
     }
 
     .navbar a {
@@ -224,8 +225,8 @@ body{
     .menu-icon {
         display: block; 
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 15px;
+        right: 15px;
         z-index: 1000;
     }
 

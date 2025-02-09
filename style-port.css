@@ -260,8 +260,8 @@ body{
     .menu-icon {
         display: block; 
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 15x;
+        right: 15px;
         z-index: 1000;
     }
 
