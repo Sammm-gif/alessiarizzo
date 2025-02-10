@@ -122,6 +122,6 @@ function toggleMenu() {
     document.querySelector(".navbar").classList.toggle("active");
 }
 
-function ArtisticResearch(){
+function toggleArtisticResearch(){
     document.querySelector(".info").classList.toggle("active")
 }
