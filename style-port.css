@@ -283,7 +283,7 @@ body{
     }
 
     .press{
-        display: flex;
+        display: flex; 
         justify-content: center;
         color:#FAF8F6; 
         background-color: #36454F;
@@ -293,6 +293,11 @@ body{
     
     .press h3{
         font-size: 7px;
+    }
+
+     
+    .info {
+        display: none;
     }
 
     .info.active{
