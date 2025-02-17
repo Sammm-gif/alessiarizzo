@@ -125,3 +125,31 @@ function toggleMenu() {
 function toggleArtisticResearch(){
     document.querySelector(".info").classList.toggle("active")
 }
+
+
+$(document).ready(function() {
+    $(".toOpen1").hide(); // Hide modal initially
+
+   $(".modalImage1").click(function() {
+        let imgSrc = $(this).attr("src"); // Get clicked image source
+       
+        $("#modalImg").attr("src", imgSrc).show(); // Ensure image is visible
+        $("#imageModal").fadeIn().addClass("aperto"); // Show modal
+    });
+    
+    function closeModal() {
+        $("#modalImg, #imageModal").fadeOut(200, function() { // Fade out both at the same time
+            $("#modalImg").attr("src", ""); // Clear image source
+            $("#imageModal").removeClass("aperto").hide(); // Hide modal instantly after fade
+            $("#modalImg").show(); // Reset for next use
+        });
+    }
+
+    $("#closeModal").click(closeModal);
+
+    $("#imageModal").click(function(event) {
+        if (!$(event.target).is("#modalImg")) { 
+            closeModal();
+        }
+    });
+});

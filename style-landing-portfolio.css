@@ -10,9 +10,9 @@
 body{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: auto 1fr  auto; /* Header, main content, footer */
+    grid-template-rows: auto 1fr auto; /* Header, main content, footer */
     height: 100vh; /* Full viewport height */
-    background-color: #FAF8F6; 
+    background-color: #FAF8F6;
 }
 
 .header{
@@ -73,72 +73,75 @@ body{
     left: 0;
 }
 
+
 .menu-icon {
     display: none;
     font-size: 24px;
     cursor: pointer;
 }
- 
-
-
-
+  
 .main{
-    display: grid;
     grid-column: 1 / -1;
     grid-row: 2 / 3;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(7, auto );
-
-}
-
-.container{
     display: grid;
-    grid-column: 2 / 10;
-    grid-row: 2 / 6;
-    grid-template-columns: repeat(3,1fr);
-    gap: 1px;
-    margin-top: 100px;
-    cursor: pointer !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
-.container img{
-    width:100%;
-    height: 300px;
-    object-fit: cover;
-    transition: 0.2s ease-in-out;
-}
-
-.container img:hover{
-    box-shadow: 0px 0px 20px #36454F;
-    transition: 0.2s ease-in-out;
-}
-
-.press{
-    display: none;
-}
-
-.info{
-    margin-top: 0px;
-    padding: 30px;
-    
-    grid-column: 2 / 10;
-    grid-row: 1 /2;
-    font-family: "Raleway", serif;
+.portSelection{
+    grid-column: 1 /-1;
+    grid-row: 1 / -1;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.info p{
-    font-size: 15px;
-    line-height: 2;
-    text-align: justify;
+.choice1, .choice2{
+    display: flex;
+    margin-top: 25px;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FAF8F6;
+    transition: 0.4s ease-in-out;
+}
+
+.choice1{
+    margin-right: -200px;
+}
+
+.choice2{
+    margin-left: -200px;
+}
+.choice1Logo:hover, .choice2Logo:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px  20px #36454F;
+}
+
+.choice1Text, .choice2Text{
+    font-family: "Raleway", serif;
+    font-size: 12px;
+    display: flex;
+}
+
+
+.choice1Text h3, .choice2Text h3{
+    margin-top: -125px;
+    padding: 10px;
+}
+
+
+.portSelection img{
+    width: 400px;
+    height: 300px;
 }
 
 #footer{
-    margin-top: 50px;
     padding: 50px;
     grid-column: 1 / 11;
-    grid-row: 3 / 4;
+    grid-row: 10 /11;
     display: flex;
     justify-content: center;
 }
@@ -152,7 +155,7 @@ body{
 }
 
 
-.toOpen1 {
+.toOpen {
     opacity: 0;
     transform: scale(0.8);
     pointer-events: none;
@@ -216,6 +219,7 @@ body{
         display: flex;
         justify-content: space-between;
         grid-column: 1 / 2; 
+        grid-row: 1 / 2;
         margin-top: 10px; 
     }
 
@@ -260,7 +264,7 @@ body{
     .menu-icon {
         display: block; 
         position: absolute;
-        top: 15x;
+        top: 15px;
         right: 15px;
         z-index: 1000;
     }
@@ -269,44 +273,36 @@ body{
         display: flex;
     }
 
+
     .main{
-        grid-column: 1 / 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .container{
-        display: flex;
-        justify-content: center ;
-        flex-direction: column;
-    }
-
-    .press{
-        display: flex; 
-        justify-content: center;
-        color:#FAF8F6; 
-        background-color: #36454F;
-        border-radius: 5px;
-        padding: 5px;
-    }
-    
-    .press h3{
-        font-size: 7px;
-    }
-
-     
-    .info {
-        display: none;
-    }
-
-    .info.active{
-        display: flex;
-        justify-content: center;
-    }
-
-    #footer {
         grid-column: 1 / 2; 
+        grid-row: 2 / 3;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+
+    .portSelection{
+        grid-column: 1 / 2; 
+        grid-row: 1 / 2;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .choice1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .choice2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer { 
+        grid-column: 3 / 4; 
         text-align: center; 
     }
 
