@@ -300,15 +300,6 @@ body{
         grid-template-rows: auto auto auto;
     }
 
-
-    .portSelection{
-        grid-column: 1 / 2; 
-        grid-row: 1 / 2;
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-    }
-
     .info {
         display: none;
     }
@@ -318,6 +309,18 @@ body{
         justify-content: center;
     }
 
+    .portSelection{
+        grid-column: 1 / 2; 
+        grid-row: 1 / 2;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+
+   .portSelection img{
+        width: 100px;
+        height: 100px;
+   }
     .choice1{
         display: flex;
         flex-direction: column;
@@ -327,6 +330,8 @@ body{
         display: flex;
         flex-direction: column;
     }
+
+
 
     #footer { 
         grid-column: 3 / 4; 
