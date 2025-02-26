@@ -85,7 +85,6 @@ body{
     grid-row: 2 / 3;
     display: flex;
     flex-direction: column;
-    flex:1;
 }
 
 .press{
@@ -102,6 +101,7 @@ body{
     margin: 50px;
     padding: 50px;
     text-align: justify;
+ 
 }
 
 
@@ -229,7 +229,7 @@ body{
 
 @media screen and (max-width: 768px) {
     /* General body styles */
-    
+ 
     body {
         display: grid;
         grid-template-columns: 1fr; 
@@ -261,7 +261,7 @@ body{
         font-size: 5px; /* Increase font size on navbar links 
     }
 
-    */
+ */   
 
     .navbar {
         display: none; 
@@ -300,7 +300,8 @@ body{
         grid-column: 1 / 2; 
         grid-row: 2 / 3;
         display: flex;
-       flex-direction: column;
+        flex-direction: column;
+        flex: 1;
     }
 
     .press{
@@ -314,13 +315,24 @@ body{
     .press:hover{
         cursor: pointer;
     }
+
     .info {
         display: none;
+    }
+
+    .info.active p{
+        text-align
+
+        font-family: "Raleway", sans-serif;
+        width: 100%;
+        min-width: 250px;
     }
 
     .info.active{
         display: flex;
         justify-content: center;
+        background-color: red;
+
     }
 
     .portSelection{
@@ -331,13 +343,13 @@ body{
     }
 
    .portSelection img{
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
    }
 
    .portSelection img:hover{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
 }
 
     .choice1{
@@ -364,4 +376,3 @@ body{
     }
 
 }
-
