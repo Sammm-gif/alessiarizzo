@@ -1,79 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-port.css">
-    <title>portfolio</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-port.css" />
+    <title>Paintings</title>
+  </head>
+  <body>
     <div class="header">
-        <div class="logo">
-             <a href="index.html"><h1>Alessia Rizzo</h1></a>
-        </div>
+      <div class="logo">
+        <a href="index.html"><h1>Alessia Rizzo</h1></a>
+      </div>
 
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
 
-
-        <div class="navbar">
-            <a href="index.html"><h1>home</h1></a>
-            <a href="landingportfolio.html"><h1>Portfolio</h1></a>
-            <a href="biography.html"><h1>Biography</h1></a>
-            <a href="contacts.html"><h1>contacts</h1></a>   
-        </div>
-    </div> 
-     
-   
+      <div class="navbar">
+        <a href="index.html"><h1>home</h1></a>
+        <a href="landingportfolio.html"><h1>Portfolio</h1></a>
+        <a href="biography.html"><h1>Biography</h1></a>
+        <a href="contacts.html"><h1>contacts</h1></a>
+      </div>
+    </div>
 
     <div class="main">
-        <div class="toOpen" id="imageModal">
-            <span id="closeModal">&times;</span> <!-- Close Button -->
-            <img id="modalImg" src="" alt="Enlarged Image">
-            <p id="modalCaption"></p> 
-        </div>
+      <div class="toOpen" id="imageModal">
+        <span id="closeModal">&times;</span>
+        <!-- Close Button -->
+        <img id="modalImg" src="" alt="Enlarged Image" />
+        <p id="modalCaption"></p>
+      </div>
 
-        
-       
-    
-        <div class="container">
-            <img src="./assetts/portfolio/24.JPG"   loading="lazy"   data-name="Milena, mixed media on canvas, 100x35cm" data-year="2024" class="modalImage">
-            <img src="./assetts/portfolio/23.JPG"   loading="lazy"     data-name="Nonna, mixed media on canvas, 100x80cm" data-year="2024" class="modalImage">
-            <img src="./assetts/portfolio/22.jpg"   loading="lazy"     data-name="Fu il tempo di muoversi,stretti in un abbraccio, non riuscimmo, lo fece il tempo, Diptych, mixed media on canva 240x160cm" data-year="2024" class="modalImage">
-            <img src="./assetts/portfolio/21.jpg"   loading="lazy"     data-name="Fu il tempo di muoversi,stretti in un abbraccio, non riuscimmo, lo fece il tempo, Diptych, mixed media on canva 200x160cm" data-year="2024" class="modalImage">
-            <img src="./assetts/portfolio/20.jpg"   loading="lazy"     data-name="Höhle, mixed meddia on canvas, 120x65cm" data-year="2024" class="modalImage">
-            <img src="./assetts/portfolio/19.JPG"   loading="lazy"     data-name="Normalità sospesa, mixed media on canvas, 60x60cm" data-year="2024" class="modalImage">
-            <img src="./assetts/portfolio/18.jpg"   loading="lazy"     data-name="POV II, oil on canvas, 40x50cm" data-year="2023" class="modalImage">
-            <img src="./assetts/portfolio/17.jpg"   loading="lazy"     data-name="POV I, oil on canvas, 40x50cm" data-year="2023" class="modalImage">
-            <img src="./assetts/portfolio/16.JPG"   loading="lazy"     data-name="Soglia, oil on recovered door, 121x46cm" data-year="2023" class="modalImage">
-            <img src="./assetts/portfolio/15.JPG"   loading="lazy"     data-name="Allunaggio, oil on canvas, 110x90cm" data-year="2023" class="modalImage">
-            <img src="./assetts/portfolio/14.JPG"   loading="lazy"     data-name="Marta, oil on canvas, 45x45cm" data-year="2023" class="modalImage">
-            <img src="./assetts/portfolio/13.jpeg"   loading="lazy"    data-name="Selfportrait, Mixed media on canvas, 165x145cm" data-year="2023" class="modalImage">
-            <img src="./assetts/portfolio/12.JPG"    loading="lazy"    data-name="Quel che più riconosco III, oil on canvas,165x145cm" data-year="2023" class="modalImage">
-            <img src="./assetts/portfolio/11.JPG"    loading="lazy"    data-name="Quel che più riconosco II, oil on canvas, 165x200cm" data-year="2023" class="modalImage">
-            <img src="./assetts/portfolio/10.jpeg"   loading="lazy"    data-name="Quel che più riconosco I, oil on canvas, 165x145cm" data-year="2023" class="modalImage">
-            <img src="./assetts/portfolio/9.jpeg"   loading="lazy"     data-name="Ciò che è intenso è sempre crudele, 100x100cm" data-year="2022" class="modalImage">
-            <img src="./assetts/portfolio/7.jpeg"   loading="lazy"     data-name="Fluidità vertiginosa II, oil on canvas, 110x90cm" data-year="2023" class="modalImage">
-            <img src="./assetts/portfolio/8.jpeg"   loading="lazy"     data-name="Fluidità vertiginosa I, oil on canvas, 110x90cm" data-year="2023" class="modalImage" >
-            <img src="./assetts/portfolio/6.JPG"   loading="lazy"      data-name="senza titolo, oil on canvas, 40x50cm" data-year="2023" class="modalImage" >
-            <img src="./assetts/portfolio/5.JPG"   loading="lazy"      data-name="senza titolo, oil on canvas, 40x50cm" data-year="2023" class="modalImage" >
-            <img src="./assetts/portfolio/4.jpeg"   loading="lazy"     data-name="Abitutdini Ansimanti Dittico, mixed media, 45x45cm" data-year="2022" class="modalImage">
-            <img src="./assetts/portfolio/3.jpg"    loading="lazy"     data-name="Abitutdini Ansimanti Dittico, mixed media, 45x55cm" data-year="2022"  class="modalImage">
-            <img src="./assetts/portfolio/2.jpeg"   loading="lazy"     data-name="senza titolo, oil on canvas, 100x80cm" data-year="2021" class="modalImage">
-            <img src="./assetts/portfolio/1.jpeg"    loading="lazy"    data-name="Convivenze, oil on canvas, 165x145cm" data-year="2021" class="modalImage">
-              
-        </div>
-      
+      <div class="container">
+        <img
+          src="./assetts/portfolio/28.jpeg"
+          loading="lazy"
+          data-name="Untitled, oil on canvas and chains, 30x24 cm"
+          data-year="2025"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/27.JPG"
+          loading="lazy"
+          data-name="3. Nothing but vibrating in sweat and cement, Oil and ash on canvas,
+          50x40cm"
+          data-year="2025"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/26.JPG"
+          loading="lazy"
+          data-name="2. Nothing but vibrating in sweat and cement, Oil and ash on canvas,
+          50x40cm"
+          data-year="2025"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/25.JPG"
+          loading="lazy"
+          data-name="Fading boundaries Oil on canvas, 100x70 cm,"
+          data-year="2025"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/24.JPG"
+          loading="lazy"
+          data-name="Milena, mixed media on canvas, 100x35cm"
+          data-year="2024"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/23.JPG"
+          loading="lazy"
+          data-name="Nonna, mixed media on canvas, 100x80cm"
+          data-year="2024"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/22.jpg"
+          loading="lazy"
+          data-name="Fu il tempo di muoversi,stretti in un abbraccio, non riuscimmo, lo fece il tempo, Diptych, mixed media on canva 240x160cm"
+          data-year="2024"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/21.jpg"
+          loading="lazy"
+          data-name="Fu il tempo di muoversi,stretti in un abbraccio, non riuscimmo, lo fece il tempo, Diptych, mixed media on canva 200x160cm"
+          data-year="2024"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/20.jpg"
+          loading="lazy"
+          data-name="Höhle, mixed meddia on canvas, 120x65cm"
+          data-year="2024"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/19.JPG"
+          loading="lazy"
+          data-name="Normalità sospesa, mixed media on canvas, 60x60cm"
+          data-year="2024"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/18.jpg"
+          loading="lazy"
+          data-name="POV II, oil on canvas, 40x50cm"
+          data-year="2023"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/17.jpg"
+          loading="lazy"
+          data-name="POV I, oil on canvas, 40x50cm"
+          data-year="2023"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/16.JPG"
+          loading="lazy"
+          data-name="Soglia, oil on recovered door, 121x46cm"
+          data-year="2023"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/15.JPG"
+          loading="lazy"
+          data-name="Allunaggio, oil on canvas, 110x90cm"
+          data-year="2023"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/14.JPG"
+          loading="lazy"
+          data-name="Marta, oil on canvas, 45x45cm"
+          data-year="2023"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/13.jpeg"
+          loading="lazy"
+          data-name="Selfportrait, Mixed media on canvas, 165x145cm"
+          data-year="2023"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/12.JPG"
+          loading="lazy"
+          data-name="Quel che più riconosco III, oil on canvas,165x145cm"
+          data-year="2023"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/11.JPG"
+          loading="lazy"
+          data-name="Quel che più riconosco II, oil on canvas, 165x200cm"
+          data-year="2023"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/10.jpeg"
+          loading="lazy"
+          data-name="Quel che più riconosco I, oil on canvas, 165x145cm"
+          data-year="2023"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/9.jpeg"
+          loading="lazy"
+          data-name="Ciò che è intenso è sempre crudele, 100x100cm"
+          data-year="2022"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/7.jpeg"
+          loading="lazy"
+          data-name="Fluidità vertiginosa II, oil on canvas, 110x90cm"
+          data-year="2023"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/8.jpeg"
+          loading="lazy"
+          data-name="Fluidità vertiginosa I, oil on canvas, 110x90cm"
+          data-year="2023"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/6.JPG"
+          loading="lazy"
+          data-name="senza titolo, oil on canvas, 40x50cm"
+          data-year="2023"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/5.JPG"
+          loading="lazy"
+          data-name="senza titolo, oil on canvas, 40x50cm"
+          data-year="2023"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/4.jpeg"
+          loading="lazy"
+          data-name="Abitutdini Ansimanti Dittico, mixed media, 45x45cm"
+          data-year="2022"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/3.jpg"
+          loading="lazy"
+          data-name="Abitutdini Ansimanti Dittico, mixed media, 45x55cm"
+          data-year="2022"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/2.jpeg"
+          loading="lazy"
+          data-name="senza titolo, oil on canvas, 100x80cm"
+          data-year="2021"
+          class="modalImage"
+        />
+        <img
+          src="./assetts/portfolio/1.jpeg"
+          loading="lazy"
+          data-name="Convivenze, oil on canvas, 165x145cm"
+          data-year="2021"
+          class="modalImage"
+        />
+      </div>
     </div>
 
-    <div  id="footer">
-        <h3>© Copyright 2025 Alessia Rizzo. All Rights Reserved.</h3>
+    <div id="footer">
+      <h3>© Copyright 2025 Alessia Rizzo. All Rights Reserved.</h3>
     </div>
-     
 
-    
-    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
