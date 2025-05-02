@@ -162,6 +162,9 @@ body {
     margin-top: 50px;
   }
 
+  .slider {
+    display: none;
+  }
   /*
   .navbar {
     display: none;
