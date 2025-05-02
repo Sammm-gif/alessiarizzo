@@ -181,4 +181,4 @@ function nextSlide() {
   }
 }
 
-setInterval(nextSlide, 3000); // Change every 3s
+setInterval(nextSlide, 6000); // Change every 6s
