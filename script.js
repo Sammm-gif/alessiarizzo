@@ -166,19 +166,21 @@ slides.forEach((slide) => {
   track.appendChild(clone);
 });
 
-function nextSlide() {
-  index++;
-  track.style.transition = "transform 0.8s ease-in-out";
-  track.style.transform = `translateX(-${slideWidth * index}px)`;
+if (window.matchMedia("(min-width: 769px)").matches) {
+  function nextSlide() {
+    index++;
+    track.style.transition = "transform 0.8s ease-in-out";
+    track.style.transform = `translateX(-${slideWidth * index}px)`;
 
-  // Reset when we reach the clone set
-  if (index >= slides.length) {
-    setTimeout(() => {
-      track.style.transition = "none";
-      track.style.transform = "translateX(0)";
-      index = 0;
-    }, 800); // must match transition duration
+    // Reset when we reach the clone set
+    if (index >= slides.length) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        track.style.transform = "translateX(0)";
+        index = 0;
+      }, 800); // must match transition duration
+    }
   }
-}
 
-setInterval(nextSlide, 6000); // Change every 6s
+  setInterval(nextSlide, 6000); // Change every 6s
+}
