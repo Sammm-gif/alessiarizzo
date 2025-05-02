@@ -167,6 +167,9 @@ body {
     margin-top: 50px;
   }
 
+  .navbar a {
+    padding: 50px;
+  }
   .slider {
     display: none;
   }
